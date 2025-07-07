@@ -15,6 +15,7 @@ services:
       MYSQL_USER: root
       MYSQL_HOST: mysql.dedisalam
       REDIS_HOST: redis.dedisalam
+      NEXTCLOUD_TRUSTED_DOMAINS: clouds.dedisalam.my.id
     networks:
       - cloudflare
       - dedisalam
