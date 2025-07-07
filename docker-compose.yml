@@ -1,7 +1,7 @@
 name: dedisalam
 services:
   nextcloud:
-    image: nextcloud:production
+    image: nextcloud:stable
     container_name: nextcloud
     restart: always
     ports:
@@ -15,7 +15,6 @@ services:
       MYSQL_USER: root
       MYSQL_HOST: mysql.dedisalam
       REDIS_HOST: redis.dedisalam
-      REDIS_HOST_PASSWORD: 4r!M4n3hKuN40n
     networks:
       - cloudflare
       - dedisalam
