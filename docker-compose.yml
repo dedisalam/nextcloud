@@ -4,6 +4,8 @@ services:
     image: nextcloud:production-fpm-alpine
     container_name: nextcloud
     restart: always
+    ports:
+      - "9000:9000"
     volumes:
       - nextcloud_data:/var/www/html
     environment:
