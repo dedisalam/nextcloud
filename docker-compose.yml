@@ -13,8 +13,8 @@ services:
       MYSQL_PASSWORD: 4r!M4n3hKuN40n
       MYSQL_DATABASE: nextcloud
       MYSQL_USER: root
-      MYSQL_HOST: mysql
-      REDIS_HOST: redis
+      MYSQL_HOST: mysql.dedisalam
+      REDIS_HOST: redis.dedisalam
       REDIS_HOST_PASSWORD: 4r!M4n3hKuN40n
     networks:
       - cloudflare
