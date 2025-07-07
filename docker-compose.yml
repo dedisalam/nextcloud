@@ -1,0 +1,28 @@
+name: dedisalam
+services:
+  nextcloud:
+    image: nextcloud:production-fpm-alpine
+    container_name: nextcloud
+    restart: always
+    volumes:
+      - nextcloud_data:/var/www/html
+    environment:
+      MYSQL_PASSWORD: 4r!M4n3hKuN40n
+      MYSQL_DATABASE: nextcloud
+      MYSQL_USER: root
+      MYSQL_HOST: mysql
+      REDIS_HOST: redis
+      REDIS_HOST_PASSWORD: 4r!M4n3hKuN40n
+    networks:
+      - cloudflare
+      - dedisalam
+
+volumes:
+  nextcloud_data:
+    name: nextcloud_data
+
+networks:
+  cloudflare:
+    name: cloudflare
+  dedisalam:
+    name: dedisalam
